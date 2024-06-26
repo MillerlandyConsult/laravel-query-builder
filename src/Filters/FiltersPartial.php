@@ -74,10 +74,12 @@ class FiltersPartial extends FiltersExact implements Filter
      */
     protected static function maybeSpecifyEscapeChar(string $driver): string
     {
-        if(! in_array($driver, ['sqlite','pgsql','sqlsrv'])) {
-            return '';
-        }
+        return '';
 
-        return " ESCAPE '\'";
+        // if(! in_array($driver, ['sqlite','pgsql','sqlsrv'])) {
+        //     return '';
+        // }
+
+        // return " ESCAPE '\'";
     }
 }
